@@ -1,0 +1,112 @@
+.profile-card {
+    background-color: #fff;
+    position: relative;
+    border-radius: $radius;
+    width: 100%;
+    max-width: rem(360);
+    box-shadow: 0 4rem 4rem -2rem darken($color-primary , 8);
+    overflow: hidden;
+    
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $spacer-large $spacer;
+        color: $color-tertiary;
+        padding-top: rem(140);
+
+        &::before {
+            content: "";
+            position: absolute ;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            height: rem(140);
+            background: url("../images/bg-pattern-card.svg") no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        order: 1;
+        margin-top: rem(-50);
+        z-index: 1;
+        border: rem(5) solid white;
+    }
+
+    &__title {
+        order: 2;
+        margin-top: rem(26);
+    }
+
+    &__name,
+    &__age {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    &__name {
+        color: $color-secondary;
+        font-weight: $weight-bold;
+    }
+
+    &__age {
+        margin-top: rem(16);
+        font-weight: $weight-normal;
+    }
+
+    &__location {
+        font-size: rem(14);
+        order: 3;
+        margin-top: rem(12);
+        margin-bottom: rem(26);
+    }
+
+
+    &__stats-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: rem(26) rem(6);
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 1px;
+            background: $neutral-200;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+
+        &-item {
+            color: $color-tertiary;
+            text-align: center;
+            margin: rem(6);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &-number {
+                font-size: 1rem;
+                font-weight: $weight-bold;
+                color: $color-secondary;
+            }
+
+            &-label {
+                font-size: rem(12);
+                margin-top: rem(6);
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+
+}
